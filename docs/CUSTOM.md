@@ -1,6 +1,6 @@
 # Customization this plugin
 
-- Edit config file and configure plugin [See `Example of configuration file`](docs/EXAMPLE_CFG_FILE)
+- Edit config file and configure plugin [See `Example of configuration file`](docs/EXAMPLE_CFG_FILE.md)
 - Comment or delete unused LDAP fields;
 - Customize using LDAP fields:
   * `label` - Full label of field (used e.g. in view);

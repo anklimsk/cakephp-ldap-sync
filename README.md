@@ -38,7 +38,7 @@ CakePlugin::load('CakeLdap', ['bootstrap' => true, 'routes' => true]);
     ];
 ```
 4. Copy configuration file from `app/Plugin/CakeLdap/Config/cakeldap.php` to `app/Config`.
-5. Edit config file and configure plugin [See `Example of configuration file`](docs/EXAMPLE_CFG_FILE)
+5. Edit config file and configure plugin [See `Example of configuration file`](docs/EXAMPLE_CFG_FILE.md)
 6. Create database tables of plugin using the CakePHP console, run the command:
   `Console/cake schema create -p CakeLdap`
 7. In your file `app\Config\core.php` uncomment modify next line: `Configure::write('Routing.prefixes', array('admin'));`
