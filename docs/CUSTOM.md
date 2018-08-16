@@ -18,6 +18,8 @@
 
 ## Customization displaying information of employees
 
+### Using helper `EmployeeInfo`
+
 1. Copy helper file from `app/Plugin/CakeLdap/View/Helper/EmployeeInfoHelper.php.default` to `app/View/Helper/EmployeeInfoHelper.php` or
 2. Edit that files
 3. If you set the type of data as `element`:
@@ -59,3 +61,15 @@ public function getExtendFieldsConfig()
 ```
 - Copy `View` element file from `app/Plugin/CakeLdap/View/Elements/infoEmployeeExtendTemplate.ctp.default` to `app/View/Elements/infoEmployeeSomeModel.ctp`
 - Edit that file
+
+### Other customization
+
+- If need add action links in table `Employees`, copy view element file from
+  `app/Plugin/CakeLdap/View/Elements/actionTableEmployee.ctp.default` to `app/View/Elements/actionTableEmployee.ctp`,
+   and modify it
+- If need change view of employees tree item, copy view element file from
+  `app/Plugin/CakeLdap/View/Elements/treeItemEmployeeFull.ctp` to `app/View/Elements/`,
+  and modify it
+- If need change view of draggable employees tree item, copy view element file from
+  `app/Plugin/CakeLdap/View/Elements/treeItemEmployeeFullDraggable.ctp` to `app/View/Elements/`,
+  and modify it
