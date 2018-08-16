@@ -1,6 +1,6 @@
 {
     "name": "anklimsk/cakephp-ldap-sync",
-    "description": "Synchronizing information with LDAP and authenticating users by membership in the LDAP security group for CakePHP 2.x",
+    "description": "Synchronizing information and authenticating users by LDAP for CakePHP 2.x",
     "type": "cakephp-plugin",
     "homepage": "https://github.com/anklimsk/cakephp-ldap-sync",
     "license": "MIT",
