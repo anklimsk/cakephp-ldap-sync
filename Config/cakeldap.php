@@ -304,9 +304,9 @@ $config['CakeLdap'] = [
             'Enable' => false,
             'Draggable' => false
         ],
-        // Company name for synchronization with AD
+        // Company name for synchronization with LDAP
         'Company' => '',
-        // Deleting information when synchronizing with AD
+        // Deleting information when synchronizing with LDAP
         'Delete' => [
             'Departments' => true,
             'Employees' => false,
