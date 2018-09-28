@@ -283,11 +283,11 @@ class EmployeeInfoBaseHelper extends CakeLdapAppHelper {
 		}
 
 		if (!empty($id)) {
-/*
+			/*
 			$methodLink = 'pjaxLink';
 			if ($returnTableRow)
-*/
-				$methodLink = 'popupModalLink';
+			*/
+			$methodLink = 'popupModalLink';
 			$result = $this->ViewExtension->$methodLink(
 				$result,
 				['controller' => $controller, 'action' => 'view', $id],
@@ -357,8 +357,7 @@ class EmployeeInfoBaseHelper extends CakeLdapAppHelper {
  * @return array|string If $returnTableRow is True, Return array of table cell.
  *  Otherwise, return string.
  */
-	protected function _getValueForBiginteger($data = null, $returnTableRow = true)
-	{
+	protected function _getValueForBiginteger($data = null, $returnTableRow = true) {
 		return $this->_getValueForNumberBase($data, $returnTableRow, 0);
 	}
 
