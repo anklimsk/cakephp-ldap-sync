@@ -7,7 +7,7 @@
      * @package plugin.View.Elements
      */
 
-    $this->assign('title', __d('cake_ldap', 'Login'));
+    $this->assign('title', $pageTitle);
 ?>      
     <div class="container container-table"> 
         <div class="row vertical-center-row">

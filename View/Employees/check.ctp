@@ -8,7 +8,7 @@
      * @package plugin.View.Employees
      */
 
-    $this->assign('title', __d('cake_ldap', 'Checking state tree of employees'));
+    $this->assign('title', $pageHeader);
     $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>  
     <div class="container">

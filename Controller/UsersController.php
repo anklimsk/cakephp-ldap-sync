@@ -105,6 +105,8 @@ class UsersController extends CakeLdapAppController
             }
             $this->Flash->error(__d('cake_ldap', 'Invalid username or password, try again'));
         }
+
+        $this->set('pageTitle', __d('cake_ldap', 'Login'));
     }
 
     /**

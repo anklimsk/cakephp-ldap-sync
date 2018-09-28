@@ -11,7 +11,7 @@
     echo $this->AssetCompress->css('CakeTheme.tree', ['block' => 'css']);
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 
-    $this->assign('title', __d('cake_ldap', 'Employees'));
+    $this->assign('title', $pageHeader);
     $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
 <div class="container-fluid">
