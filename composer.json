@@ -15,10 +15,10 @@
         "cakephp/datasources": "2.3.x-dev",
         "dereuromark/cakephp-queue": "^2.3.0",
         "dereuromark/cakephp-tools": "^0.12.3",
-        "anklimsk/cakephp-basic-functions": "*",
-        "anklimsk/cakephp-config-plugin": "*",
-        "anklimsk/cakephp-extended-test": "*",
-        "anklimsk/cakephp2-theme": "*"
+        "anklimsk/cakephp-basic-functions": "^0.4.2",
+        "anklimsk/cakephp-config-plugin": "^0.1.3",
+        "anklimsk/cakephp-extended-test": "^0.8.1",
+        "anklimsk/cakephp2-theme": "^0.7.8"
     },
     "support": {
         "source": "https://github.com/anklimsk/cakephp-ldap-sync"
