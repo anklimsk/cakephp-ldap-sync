@@ -56,6 +56,7 @@ class EmployeeDb extends CakeLdapAppModel
     public $actsAs = [
         'Containable',
         'CakeLdap.Sync',
+        'CakeTheme.BreadCrumb'
     ];
 
     /**
@@ -1295,5 +1296,41 @@ class EmployeeDb extends CakeLdapAppModel
         Cache::write($cachePath, $result, CAKE_LDAP_CACHE_KEY_LDAP_SYNC_DB);
 
         return $result;
+    }
+
+    /**
+     * Return plugin name.
+     *
+     * @return string Return plugin name for breadcrumb.
+     */
+    public function getPluginName()
+    {
+        $pluginName = 'cake_ldap';
+
+        return $pluginName;
+    }
+
+    /**
+     * Return controller name.
+     *
+     * @return string Return controller name for breadcrumb.
+     */
+    public function getControllerName()
+    {
+        $controllerName = 'employees';
+
+        return $controllerName;
+    }
+
+    /**
+     * Return name of group data.
+     *
+     * @return string Return name of group data
+     */
+    public function getGroupName()
+    {
+        $groupName = __d('cake_ldap', 'Employees');
+
+        return $groupName;
     }
 }

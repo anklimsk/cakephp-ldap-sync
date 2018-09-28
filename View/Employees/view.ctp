@@ -12,6 +12,7 @@
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 
     $this->assign('title', __d('cake_ldap', 'Detail information'));
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 
     $viewurl = $this->Html->url(
         [
@@ -19,8 +20,6 @@
             'action' => 'view'
         ]
     );
-    $this->Html->addCrumb(__d('cake_ldap', 'Employees'), ['controller' => 'employees', 'action' => 'index']);
-    $this->Html->addCrumb(__d('cake_ldap', 'Viewing'));
 ?>  
     <div class="container">
 <?php

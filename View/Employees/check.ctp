@@ -9,9 +9,7 @@
      */
 
     $this->assign('title', __d('cake_ldap', 'Checking state tree of employees'));
-
-    $this->Html->addCrumb(__d('cake_ldap', 'Employees'), ['controller' => 'employees', 'action' => 'index']);
-    $this->Html->addCrumb(__d('cake_ldap', 'Checking tree'));
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>  
     <div class="container">
 <?php

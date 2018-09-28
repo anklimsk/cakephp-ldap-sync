@@ -12,9 +12,7 @@
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 
     $this->assign('title', __d('cake_ldap', 'Tree view information of employees'));
-
-    $this->Html->addCrumb(__d('cake_ldap', 'Employees'), ['controller' => 'employees', 'action' => 'index']);
-    $this->Html->addCrumb(__d('cake_ldap', 'Tree viewing'));
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>  
     <div class="container">
 <?php

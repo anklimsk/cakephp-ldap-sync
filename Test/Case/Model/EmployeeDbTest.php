@@ -1440,4 +1440,40 @@ class EmployeeDbTest extends AppCakeTestCase
         ];
         $this->assertData($expected, $result);
     }
+
+    /**
+     * testGetPluginName method
+     *
+     * @return void
+     */
+    public function testGetPluginName()
+    {
+        $result = $this->_targetObject->getPluginName();
+        $expected = 'cake_ldap';
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetControllerName method
+     *
+     * @return void
+     */
+    public function testGetControllerName()
+    {
+        $result = $this->_targetObject->getControllerName();
+        $expected = 'employees';
+        $this->assertData($expected, $result);
+    }
+
+    /**
+     * testGetGroupName method
+     *
+     * @return void
+     */
+    public function testGetGroupName()
+    {
+        $result = $this->_targetObject->getGroupName();
+        $expected = __d('cake_ldap', 'Employees');
+        $this->assertData($expected, $result);
+    }
 }

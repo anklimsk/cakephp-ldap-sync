@@ -139,14 +139,18 @@ class EmployeeActionComponent extends Component
                 ['title' => __d('cake_ldap', 'Tree view of employees')]
             ];
         }
+        $breadCrumbs = $this->_modelEmployee->getBreadcrumbInfo();
+        $breadCrumbs[] = __d('cake_ldap', 'Index');
         $this->_controller->ViewExtension->setRedirectUrl(true, 'employee');
+
         $this->_controller->set(compact(
             'employees',
             'filterOptions',
             'fieldsConfig',
             'isTreeReady',
             'pageHeader',
-            'headerMenuActions'
+            'headerMenuActions',
+            'breadCrumbs'
         ));
     }
 
@@ -227,6 +231,9 @@ class EmployeeActionComponent extends Component
                 ['title' => __d('cake_ldap', 'Edit tree of subordinate employee')]
             ];
         }
+        $breadCrumbs = $this->_modelEmployee->getBreadcrumbInfo();
+        $breadCrumbs[] = __d('cake_ldap', 'Viewing');
+
         $this->_controller->set(compact(
             'employee',
             'fieldsLabel',
@@ -235,7 +242,8 @@ class EmployeeActionComponent extends Component
             'id',
             'isTreeReady',
             'pageHeader',
-            'headerMenuActions'
+            'headerMenuActions',
+            'breadCrumbs'
         ));
     }
 
@@ -339,12 +347,16 @@ class EmployeeActionComponent extends Component
                 ['title' => __d('cake_ldap', 'Check state tree of employees')]
             ]
         ];
+        $breadCrumbs = $this->_modelEmployee->getBreadcrumbInfo();
+        $breadCrumbs[] = __d('cake_ldap', 'Tree viewing');
+
         $this->_controller->set(compact(
             'employees',
             'isTreeDraggable',
             'expandAll',
             'pageHeader',
-            'headerMenuActions'
+            'headerMenuActions',
+            'breadCrumbs'
         ));
     }
 
@@ -401,7 +413,10 @@ class EmployeeActionComponent extends Component
                 ]
             ];
         }
-        $this->_controller->set(compact('treeState', 'pageHeader', 'headerMenuActions'));
+        $breadCrumbs = $this->_modelEmployee->getBreadcrumbInfo();
+        $breadCrumbs[] = __d('cake_ldap', 'Checking tree');
+
+        $this->_controller->set(compact('treeState', 'pageHeader', 'headerMenuActions', 'breadCrumbs'));
     }
 
     /**

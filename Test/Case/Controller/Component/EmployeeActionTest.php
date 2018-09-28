@@ -797,6 +797,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'tree', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Tree view of employees')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Index')
             ]
         ];
         $this->assertData($expected, $result);
@@ -1109,6 +1120,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'tree', '4', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Edit tree of subordinate employee')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Viewing')
             ]
         ];
         $this->assertData($expected, $result);
@@ -1315,6 +1337,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'tree', '4', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Edit tree of subordinate employee')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Viewing')
             ]
         ];
         $this->assertData($expected, $result);
@@ -1563,6 +1596,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'tree', '3', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Edit tree of subordinate employee')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Viewing')
             ]
         ];
         $this->assertData($expected, $result);
@@ -1790,6 +1834,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'sync', '9d6cf30f-a579-4cbc-8dd1-c92a43b65aaf', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Synchronize information of this employee with LDAP server')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Viewing')
             ]
         ];
         $this->assertData($expected, $result);
@@ -2052,6 +2107,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'check', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Check state tree of employees')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Tree viewing')
             ]
         ];
         $this->assertData($expected, $result);
@@ -2254,6 +2320,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'check', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Check state tree of employees')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Tree viewing')
             ]
         ];
         $this->assertData($expected, $result);
@@ -2352,6 +2429,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                     ['controller' => 'employees', 'action' => 'check', 'prefix' => false],
                     ['title' => __d('cake_ldap', 'Check state tree of employees')]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Tree viewing')
             ]
         ];
         $this->assertData($expected, $result);
@@ -2425,7 +2513,18 @@ class EmployeeActionComponentTest extends AppCakeTestCase
         $expected = [
             'treeState' => true,
             'pageHeader' => __d('cake_ldap', 'Checking state tree of employees'),
-            'headerMenuActions' => []
+            'headerMenuActions' => [],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Checking tree')
+            ]
         ];
         $this->assertData($expected, $result);
     }
@@ -2449,19 +2548,19 @@ class EmployeeActionComponentTest extends AppCakeTestCase
         $expected = [
             'treeState' => [
                 [
-                    0 => 'index',
-                    1 => 15,
-                    2 => 'missing',
+                    'index',
+                    15,
+                    'missing',
                 ],
                 [
-                    0 => 'node',
-                    1 => '4',
-                    2 => 'has invalid left or right values',
+                    'node',
+                    '4',
+                    'has invalid left or right values',
                 ],
                 [
-                    0 => 'node',
-                    1 => '7',
-                    2 => 'right greater than parent (node 4).',
+                    'node',
+                    '7',
+                    'right greater than parent (node 4).',
                 ]
             ],
             'pageHeader' => __d('cake_ldap', 'Checking state tree of employees'),
@@ -2475,6 +2574,17 @@ class EmployeeActionComponentTest extends AppCakeTestCase
                         'data-toggle' => 'request-only',
                     ]
                 ]
+            ],
+            'breadCrumbs' => [
+                [
+                    __d('cake_ldap', 'Employees'),
+                    [
+                        'plugin' => 'cake_ldap',
+                        'controller' => 'employees',
+                        'action' => 'index'
+                    ]
+                ],
+                __d('cake_ldap', 'Checking tree')
             ]
         ];
         $this->assertData($expected, $result);

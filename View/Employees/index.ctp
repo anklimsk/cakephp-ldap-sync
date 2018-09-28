@@ -12,9 +12,7 @@
     echo $this->AssetCompress->script('CakeTheme.tree', ['block' => 'script']);
 
     $this->assign('title', __d('cake_ldap', 'Employees'));
-
-    $this->Html->addCrumb(__d('cake_ldap', 'Employees'), ['controller' => 'employees', 'action' => 'index']);
-    $this->Html->addCrumb(__d('cake_ldap', 'Index'));
+    $this->ViewExtension->addBreadCrumbs($breadCrumbs);
 ?>
 <div class="container-fluid">
 <?php
