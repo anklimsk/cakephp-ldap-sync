@@ -12,13 +12,13 @@
     "require": {
         "php": ">=5.4",
         "composer/installers": "^1.5.0",
+        "anklimsk/cakephp-basic-functions": "^1.0.0",
+        "anklimsk/cakephp-config-plugin": "^1.0.0",
+        "anklimsk/cakephp-extended-test": "^1.0.0",
+        "anklimsk/cakephp2-theme": "^1.0.0",
         "cakephp/datasources": "2.3.x-dev",
         "dereuromark/cakephp-queue": "^2.3.0",
-        "dereuromark/cakephp-tools": "^0.12.3",
-        "anklimsk/cakephp-basic-functions": "^0.4.2",
-        "anklimsk/cakephp-config-plugin": "^0.1.3",
-        "anklimsk/cakephp-extended-test": "^0.8.1",
-        "anklimsk/cakephp2-theme": "^0.7.8"
+        "dereuromark/cakephp-tools": "^0.12.4"
     },
     "support": {
         "source": "https://github.com/anklimsk/cakephp-ldap-sync"
