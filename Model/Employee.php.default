@@ -19,6 +19,14 @@ App::uses('EmployeeDb', 'CakeLdap.Model');
 class Employee extends EmployeeDb {
 
 /**
+ * Name of the model.
+ *
+ * @var string
+ * @link http://book.cakephp.org/2.0/en/models/model-attributes.html#name
+ */
+	public $name = 'Employee';
+
+/**
  * Return information about a employee
  *
  * @param int|string $id ID of record or Distinguished name for retieve information
