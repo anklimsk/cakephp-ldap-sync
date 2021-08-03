@@ -247,7 +247,7 @@ class EmployeeLdap extends CakeLdapAppModel {
 		}
 
 		if (empty($conditions) || !is_array($conditions)) {
-			return $baseQuery;
+			return '(&' . $baseQuery . ')';
 		}
 
 		$result = '(&' . $baseQuery;
